@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/home_data.dart';
-
 import '../models/home.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,11 +37,32 @@ class _MyWidgetState extends State<MyWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
+                        //gambar
                         Expanded(
                             child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
-                          child: Image.asset(varHome.imageAsset, fit: BoxFit.cover,),
-                        ))
+                          child: Image.asset(
+                            varHome.imageAsset,
+                            fit: BoxFit.cover,
+                          ),
+                        )),
+                        //nama tempat
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, top: 8),
+                          child: Text(
+                            varHome.name,
+                            style: const TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        // lokasi tempat
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, bottom: 8),
+                          child: Text(
+                            varHome.location,
+                            style: const TextStyle(fontSize: 12),
+                          ),
+                        ),
                       ],
                     ),
                   );
