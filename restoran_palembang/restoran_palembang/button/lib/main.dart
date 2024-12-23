@@ -1,3 +1,4 @@
+import 'package:button/screens/menu_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/', // Set the initial route
+      // Tentukan rute aplikasi
+      initialRoute: '/', // Halaman pertama yang muncul
       routes: {
-        '/': (context) => const MainScreen(), // Main screen route
-        '/setting': (context) => const SettingScreen(), // Setting screen route
-        '/tentang': (context) => const TentangScreen(), // Tentang screen route
+        '/': (context) => const MenuScreen(),
       },
     );
   }
