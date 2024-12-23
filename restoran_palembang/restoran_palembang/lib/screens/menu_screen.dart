@@ -14,10 +14,6 @@ class MenuScreen extends StatelessWidget {
         elevation: 3,
         actions: [
           // Profile icon on the right
-          IconButton(
-            icon: const Icon(Icons.account_circle, color: Colors.black),
-            onPressed: () {},
-          ),
           const SizedBox(
               width: 10), // Optional space between the icon and the edge
         ],

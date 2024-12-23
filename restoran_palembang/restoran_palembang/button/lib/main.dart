@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:button/screens/main_screen.dart';
-import 'package:button/screens/setting_screen.dart'; // Import the SettingScreen
-import 'package:button/screens/tentang_screen.dart';
 
 void main() {
   runApp(const MainApp());
