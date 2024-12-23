@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:restoran_palembang/screens/menu_screen.dart';
+import 'package:restoran_palembang/screens/setting_screen.dart';
+import 'package:restoran_palembang/screens/tentang_screen.dart';
 import 'screens/halaman_utama_screen.dart';
 import 'screens/login_screen.dart';
 
@@ -21,9 +24,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HalamanUtamaScreen(),
         '/login': (context) => const LoginScreen(),
+        '/setting': (context) => const SettingScreen(), // Setting screen route
+        '/tentang': (context) => const TentangScreen(),
+        '/menu':(context)=> const MenuScreen(),
       },
-      
-
     );
   }
 }
