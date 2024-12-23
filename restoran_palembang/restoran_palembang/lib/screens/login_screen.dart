@@ -25,15 +25,12 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // TODO: 1. LOGO APLIKASI RESTORAN PALEMBANG
               SizedBox(
                 width: 200,
                 height: 200,
                 child:
                     Image.asset('images/logo-aplikasi-restoran-palembang.png'),
               ),
-
-              // TODO: 2. TEXTFIELD USERNAME
               const SizedBox(height: 16),
               const TextField(
                 decoration: InputDecoration(
@@ -46,8 +43,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextStyle(color: Color.fromARGB(255, 235, 113, 0)),
                     hintText: 'Masukkan username anda'),
               ),
-
-              // TODO: 3. TEXTFIELD PASSWORD
               const SizedBox(height: 16),
               const TextField(
                 decoration: InputDecoration(
@@ -61,8 +56,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     hintText: 'Masukkan password anda'),
                 obscureText: true,
               ),
-
-              // TODO: 4. TEXTBUTTON SIGN UP
               const SizedBox(height: 16),
               RichText(
                 text: TextSpan(
@@ -85,8 +78,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 textAlign: TextAlign.center,
               ),
-
-              // TODO: 5. TOMBOL LOGIN
               const SizedBox(height: 16),
               SizedBox(
                 width: 150,
