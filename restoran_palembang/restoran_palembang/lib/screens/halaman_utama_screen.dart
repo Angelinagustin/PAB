@@ -30,7 +30,9 @@ class HalamanUtamaScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 235, 113, 0),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
                 child: const Text(
                   'Login',
                   style: TextStyle(color: Colors.white),
