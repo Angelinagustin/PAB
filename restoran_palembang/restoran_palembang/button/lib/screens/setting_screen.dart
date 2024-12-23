@@ -16,10 +16,7 @@ class SettingScreen extends StatelessWidget {
           // Profile icon on the right
           IconButton(
             icon: const Icon(Icons.account_circle, color: Colors.black),
-            onPressed: () {
-              // Action for profile icon, e.g., navigate to profile screen
-              print('Profile icon pressed');
-            },
+            onPressed: () {},
           ),
           const SizedBox(
               width:
@@ -73,7 +70,7 @@ class SettingScreen extends StatelessWidget {
                   backgroundColor: Color.fromARGB(255, 235, 113, 0),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.pushNamed(context, '/tentang');
                 },
                 child: const Text(
                   'Tentang Aplikasi',
