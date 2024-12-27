@@ -53,7 +53,7 @@ class TentangScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Aplikasi ini membantu Anda menemukan restoran terbaik di Palembang. Temukan makanan lezat dan suasana yang nyaman sesuai selera Anda.',
+                'Aplikasi Restoran Palembang merupakan aplikasi yang menampilkan restoran-restoran yang ada di Palembang beserta informasi dan penilaian restoran terkait. Aplikasi ini dapat memudahkan pengguna mencari restoran yang berkualitas dan sesuai dengan keinginan serta berbagi informasi dengan pengguna lain.',
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 14),
               ),
