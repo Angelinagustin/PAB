@@ -9,76 +9,85 @@ class SettingScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Setting'),
         centerTitle: true,
-        backgroundColor: Colors.white,
         shadowColor: Colors.black,
         elevation: 3,
         actions: [
-          // Profile icon on the right
+          // Icon profile
           IconButton(
             icon: const Icon(Icons.account_circle, color: Colors.black),
             onPressed: () {},
           ),
-          const SizedBox(
-              width:
-                  10), // Optional: Adds some space between the icon and the edge
+          const SizedBox(width: 10),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Login button
-            const SizedBox(height: 16),
-            SizedBox(
-              width: 200,
-              height: 40,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 235, 113, 0),
+      body: Container(
+        constraints: const BoxConstraints
+            .expand(), // Memastikan container memenuhi layar
+        decoration: const BoxDecoration(
+          color: Colors.white, // Warna latar belakang body
+        ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Riwayat Ulasan button
+                SizedBox(
+                  width: 200,
+                  height: 40,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 235, 113, 0),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: const Text(
+                      'Riwayat Ulasan',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/login');
-                },
-                child: const Text(
-                  'Riwayat Ulasan',
-                  style: TextStyle(color: Colors.white),
+                const SizedBox(height: 16),
+                // Laporkan Masalah button
+                SizedBox(
+                  width: 200,
+                  height: 40,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 235, 113, 0),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: const Text(
+                      'Laporkan Masalah',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ),
-              ),
+                const SizedBox(height: 16),
+                // Tentang Aplikasi button
+                SizedBox(
+                  width: 200,
+                  height: 40,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 235, 113, 0),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/tentang');
+                    },
+                    child: const Text(
+                      'Tentang Aplikasi',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            // Sign Up button with the same size and style as the Login button
-            const SizedBox(height: 16),
-            SizedBox(
-              width: 200,
-              height: 40,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 235, 113, 0),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  'Laporkan Masalah',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              width: 200,
-              height: 40,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 235, 113, 0),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/tentang');
-                },
-                child: const Text(
-                  'Tentang Aplikasi',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
